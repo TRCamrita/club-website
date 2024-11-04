@@ -1,6 +1,10 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 body{
     background-color: #0D1B2A;
@@ -20,6 +24,15 @@ body{
     font-family: 'Exo2';
     src: url('./assets/Fonts/Exo-2/Exo2-Medium.ttf');
 }
+@font-face{
+    font-family: 'ITC';
+    src: url('./assets/Fonts/ITC/ITCBenguiatStdBoldCn.OTF');
+}
+@font-face{
+    font-family: 'StrangerThings';
+    src: url('./assets/Fonts/StrangerThings/StrangerThings.ttf');
+}
+
 
 
 

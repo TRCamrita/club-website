@@ -1,8 +1,16 @@
 import React from 'react'
+
+// importing logo  
 import logo from '../assets/images/logo-filtered.png'
+
+// importing social media icons
 import Instagram from '../assets/images/Socialmedia/instagram.svg'
 import Facebook from '../assets/images/Socialmedia/facebook.svg'
 import Github from '../assets/images/Socialmedia/github.svg'
+
+// importing animations library
+import {motion} from 'framer-motion'
+
 
 export default function Navbar() {
   return (

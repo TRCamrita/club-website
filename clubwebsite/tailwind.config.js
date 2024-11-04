@@ -10,6 +10,8 @@ export default {
         'primary': ["Orbitron", 'sans-serif'],
         'primary-bold':["Orbitron-bold", 'sans-serif'],
         'secondary':["Exo2", 'sans-serif'],
+        'tertiary':["ITC", 'sans-serif'],
+        'outline':["StrangerThings", 'sans-serif'],
       },
       backgroundColor:{
         'DarkBlue':'#0D1B2A',
