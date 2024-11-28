@@ -1,58 +1,50 @@
-import React from 'react'
-
-// importing logo  
-import logo from '../assets/images/logo-filtered.png'
-
-// importing social media icons
-import Instagram from '../assets/images/Socialmedia/instagram.svg'
-import Facebook from '../assets/images/Socialmedia/facebook.svg'
-import Github from '../assets/images/Socialmedia/github.svg'
-
-// importing animations library
-import {motion} from 'framer-motion'
-
+import React, { useState, useEffect } from 'react'
+import Logo from '../assets/images/logo.png'
 
 export default function Navbar() {
+
+  // defining a state variable to store the scroll position 
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    };
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleScrolltoAbout = () => {
+
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+
+
+
   return (
-    <div className='w-full h-[110 ] bg-DarkBlue flex navbar text-white px-10   justify-between items-center'>
-      {/* logocontainer goes here */}
-      <div className='logo-container'>
-      <img src={logo} alt="Club-logo"  height={110} width={110}/>
-      </div>
+    <>
+      <div className={`sticky-navbar-container fixed top-0 w-full text-White font-headers p-6 rounded-2xl  h-auto  z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-black bg-opacity-70 shadow-lg'
+        : 'bg-transparent'}`}>
 
-      {/* navlinks goes here  */}
-      <div className='menu-items-holder'>
-        <ul className='flex space-x-6 font-primary text-xl'>
-          <li className='nav-item'>
-            <a href="#">Home</a>
-          </li>
-          <li className='nav-item'>
-            <a href="#">About</a>
-          </li>
-          <li className='nav-item'>
-            <a href="#">Achivements</a>
-          </li>
-          <li className='nav-item'>
-            <a href="#">Team</a>
-          </li>
-        </ul>
-      </div>
-
-      {/* social media links goes here  */}
-      <div className='social-media-items-holder'>
-        <ul className='flex space-x-6 font-primary text-xl justify-center items-center'>
-          <li className='nav-item'>
-            <a href="#"><img src={Instagram} alt="" /></a>
-          </li>
-          <li className='nav-item'>
-            <a href="#"><img src={Facebook} alt="" /></a>
-          </li>
-          <li className='nav-item'>
-            <a href="#"><img src={Github} alt="" /></a>
-          </li>
-        </ul>
+        <div className='inner-navbar-container flex justify-between items-center mx-auto'>
+          <div className='logo-container hover:scale-110 transition-transform duration-300 ease-in-out flex justify-center items-center'>
+            <img src={Logo} alt="Logo" width={100} height={100} />
+          </div>
+          <div className='menu-items-container'>
+            <ul className='flex justify-between space-x-16 font-tertiary text-lg items-center'>
+              <li><a href="#" className='hover:text-green-300 transition-colors duration-300'>Home</a></li>
+              <li><a onClick={handleScrolltoAbout} className='hover:text-green-300 transition-colors duration-300 cursor-pointer'>About</a></li>
+              <li><a href="#" className='hover:text-green-300 transition-colors duration-300'>Members</a></li>
+              <li><a href="#" className='hover:text-green-300 transition-colors duration-300'>Achievements</a></li>
+            </ul>
+          </div>
         </div>
-        
-    </div>
+      </div>
+    </>
   )
 }

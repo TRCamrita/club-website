@@ -1,14 +1,19 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Hero from './Hero'
-import Footer from './Footer'
+import About from './About'
+// import Projects from './Projects'
+
 
 export default function Home() {
   return (
-   <>
-        <Navbar/>
-      <Hero/>
-      <Footer/>
-   </>
+    <>
+        <div className='home-page-container h-screen'>
+            <Navbar/>
+             <Hero/>
+             <About/>  
+            {/* // <Projects/>   */}
+        </div>
+    </>
   )
 }

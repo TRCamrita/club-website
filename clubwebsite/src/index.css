@@ -4,34 +4,27 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-body{
-    background-color: #0D1B2A;
-    min-height: 100%;
-}
-/* importing the font face from locals  */
-@font-face{
-    font-family: 'Orbitron';
-    src:url('./assets/Fonts/Orbitron/Orbitron-Regular.ttf')
-}
-@font-face{
-    font-family: 'Orbitron-bold';
-    src: url('./assets/Fonts/Orbitron/Orbitron-ExtraBold.ttf');
+/* applying the background image and overlay effect to the homepage */
+.home-page-container{
+  background-image: url('./assets/images/image.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat; 
 }
 
+
+
+/* registering a font face  */
 @font-face{
-    font-family: 'Exo2';
-    src: url('./assets/Fonts/Exo-2/Exo2-Medium.ttf');
+  font-family:'Roboto Mono';
+  src: url('./assets/Fonts/RobotoMono.ttf') ;
 }
 @font-face{
-    font-family: 'ITC';
-    src: url('./assets/Fonts/ITC/ITCBenguiatStdBoldCn.OTF');
+  font-family:'Rubik';
+  src: url('./assets/Fonts/Rubik.ttf') ;
 }
-@font-face{
-    font-family: 'StrangerThings';
-    src: url('./assets/Fonts/StrangerThings/StrangerThings.ttf');
-}
+
 
 
 

@@ -1,36 +1,23 @@
 import React from 'react'
-import Model from './Model'
-import { Canvas } from '@react-three/fiber'
+import { motion } from 'framer-motion'
 
 export default function Hero() {
-    return (
-        <div className='bg-DarkBlue flex items-center overflow-hidden'>
-            <div className='container mx-auto px-6 flex py-16'>
-                <div className='flex flex-col w-3/5'>
-                    <span className='w-20 h-2 bg-ElectricGreen mb-12'></span>
-                    <h1 className='font-primary mt-2 text-4xl flex flex-col leading-relaxed text-White'>
-                        Welcome to
-                        <span className='text-ElectricGreen text-7xl uppercase mt-2'>
-                            The Robotics Club
-                        </span>
-                    </h1>
-                    <p className='text-2xl pt-4 text-Silver font-secondary leading-relaxed'>
-                        "Engineering the Future, One Bot at a Time 🤖 | Where Innovation Meets Imagination | Join Us in Building Tomorrow’s Tech Today!"
-                    </p>
-
-                    <div className='flex mt-8'>
-                        <a href="#" className='uppercase py-2 px-4 rounded-lg bg-ElectricGreen border-2 border-transparent text-Black text-md mr-4 font-primary-bold'> Connect</a>
-                    </div>
-                </div>
-
-                <div className='w-2/5 flex items-center justify-center'>
-                    <Canvas style={{ height: '400px' }}>
-                        <ambientLight intensity={0.5} />
-                        <pointLight position={[10, 10, 10]} />
-                        <Model />
-                    </Canvas>
-                </div>
-            </div>
-        </div>
-    )
+  return (
+    <>
+    <motion.div
+     className='hero-container flex justify-center items-center flex-col space-y-6 w-full pt-[4rem] h-screen'
+     initial={{opacity:0,x:-100}}
+     animate={{opacity:1,x:0}}
+     transition={{duration:1,ease:'easeInOut'}}
+     >
+      <div className='z-10 text-center'>
+      <h1 className='text-White text-9xl font-primary font-bold'>TRC</h1>
+      </div>
+        
+        <h1 className='text-Silver text-7xl font-primary font-bold'>The Robotics Club Amritapuri</h1>
+        <button className='bg-green-300 text-Black p-4 font-headers w-44 '>Connect</button>
+    </motion.div>
+    
+    </>
+  )
 }

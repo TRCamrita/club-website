@@ -4,24 +4,19 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode:'class',
   theme: {
     extend: {
       fontFamily: {
-        'primary': ["Orbitron", 'sans-serif'],
-        'primary-bold':["Orbitron-bold", 'sans-serif'],
-        'secondary':["Exo2", 'sans-serif'],
-        'tertiary':["ITC", 'sans-serif'],
-        'outline':["StrangerThings", 'sans-serif'],
+        'primary':['Roboto Mono','monospace'],
+        'headers':['Rubik','sans-serif']
       },
       backgroundColor:{
-        'DarkBlue':'#0D1B2A',
-        'NeonBlue':'#1B98F5',
         'Silver':'#B0BEC5',
         'White':'#FFFFFF',
-        'Black':'#000000',
-        'ElectricGreen':'#32FF6A',
+        'Black':'#1e1e1e',
       },
-      colors:{
+      textColor:{
         'DarkBlue':'#0D1B2A',
         'NeonBlue':'#1B98F5',
         'Silver':'#B0BEC5',
