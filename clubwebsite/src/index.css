@@ -6,7 +6,7 @@
 
 /* applying the background image and overlay effect to the homepage */
 .home-page-container{
-  background-image: url('./assets/images/image.png');
+  background-image: url('./assets/images/covershaded.png');                     
   background-size: cover;
   background-position: center;
   position: relative;
