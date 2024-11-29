@@ -4,6 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .bg-grid-pattern,.our-projects {
+    background-image: 
+      linear-gradient( rgba(6, 230, 6, 0.062) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6, 230, 6, 0.048) 1px, transparent 1px);
+    background-size: 100px 100px;
+  }
+}
+
 /* applying the background image and overlay effect to the homepage */
 .home-page-container{
   background-image: url('./assets/images/covershaded.png');                     
