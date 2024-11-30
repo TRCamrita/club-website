@@ -18,7 +18,7 @@ export default function Contact() {
 
   return (
     <>
-      <div className="contact-container flex flex-col bg-transparent border border-white mt-24 mx-72 p-6">
+      <div className="contact-container flex flex-col bg-transparent border border-green-700/40 shadow-lime-50 shadow-sm mt-24 mx-72 p-6 mb-10 ">
         <div className="header-container px-8 pt-6 pb-4 flex font-headers text-White text-4xl">
           <h1>Contact</h1>
         </div>
@@ -123,6 +123,10 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      <br />
+      <br />
+
+      
     </>
   );
 }
