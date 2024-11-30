@@ -3,15 +3,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer utilities {
-  .bg-grid-pattern,.our-projects {
-    background-image: 
-      linear-gradient( rgba(6, 230, 6, 0.062) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(6, 230, 6, 0.048) 1px, transparent 1px);
-    background-size: 100px 100px;
+/* @layer utilities {
+  .bg-wavy-lines {
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(1, 25, 34, 0.863) 1px,
+      transparent 4px
+    );
+    background-size: 120px 120px;
   }
-}
+} */
+
+
+
 
 /* applying the background image and overlay effect to the homepage */
 .home-page-container{
@@ -34,8 +38,18 @@
   src: url('./assets/Fonts/Rubik.ttf') ;
 }
 
-
-
-
-
-    
+.animated-background {
+  --s: 198px; /* control the size*/
+  --c1: #4f4f4f;
+  --c2: #292424;
+  --c3: #000000;
+ 
+  background:
+    conic-gradient(from 75deg,var(--c1)   15deg ,var(--c2) 0 30deg ,#0000 0 180deg,
+                              var(--c2) 0 195deg,var(--c1) 0 210deg,#0000 0)
+       calc(var(--s)/2) calc(.5*var(--s)/tan(30deg)),
+    conic-gradient(var(--c1)   30deg ,var(--c3) 0 75deg ,var(--c1) 0 90deg, var(--c2) 0 105deg,
+                   var(--c3) 0 150deg,var(--c2) 0 180deg,var(--c3) 0 210deg,var(--c1) 0 256deg,
+                   var(--c2) 0 270deg,var(--c1) 0 286deg,var(--c2) 0 331deg,var(--c3) 0);
+  background-size: var(--s) calc(var(--s)/tan(30deg));
+}

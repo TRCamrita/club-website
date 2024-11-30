@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import Hero from './Hero'
 import About from './About'
 import Projects from './Projects'
+import Contact from './Contact'
 
 
 export default function Home() {
@@ -11,9 +12,10 @@ export default function Home() {
         <div className='home-page-container h-screen'>
             <Navbar/>
              <Hero/>
-             <div className='bg-grid-pattern bg-Black'><About/>  
+             <div className='animated-background bg-Black'><About/>  
              <Projects/>
-             </div>
+              <Contact/>
+             </div> 
                
         </div>
     </>

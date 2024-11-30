@@ -16,6 +16,7 @@ export default {
         'Silver':'#B0BEC5',
         'White':'#FFFFFF',
         'Black':'#1e1e1e',
+        'Charcoal':"#36454F"
       },
       textColor:{
         'DarkBlue':'#0D1B2A',
