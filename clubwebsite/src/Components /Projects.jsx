@@ -86,7 +86,7 @@ export default function Projects() {
         
         <button
           className="p-4 mt-8 font-headers bg-green-700 text-White rounded-3xl"
-          onClick={() => navigate("/projects")}
+          onClick={() => navigate("/achievements")}
         >
           Explore all Projects
         </button>

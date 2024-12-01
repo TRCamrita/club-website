@@ -3,6 +3,7 @@ import React from 'react'
 import 'leaflet/dist/leaflet.css'
 import Home from './Components /Home'
 import Members from './Components /Members'
+import Achievements from './Components /Achievements'
 
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
 
        <Route path='/' element={<Home/>}/>
         <Route path='/members' element={<Members/>}/>
+        <Route path='/achievements' element={<Achievements/>}/>
+        
 
       </Routes>
 
