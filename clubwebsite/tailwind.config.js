@@ -8,6 +8,15 @@ export default {
   darkMode:'class',
   theme: {
     extend: {
+      animation: {
+        scroll: 'scroll 40s linear infinite',
+    },
+    keyframes: {
+      scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(calc(-250px * 7))' },
+      },
+  },
       fontFamily: {
         'primary':['Roboto Mono','monospace'],
         'headers':['Rubik','sans-serif']

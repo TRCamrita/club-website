@@ -6,18 +6,22 @@ import Projects from './Projects'
 import Contact from './Contact'
 
 
+
+
 export default function Home() {
   return (
+
     <>
-        <div className='home-page-container h-screen'>
-            <Navbar/>
-             <Hero/>
-             <div className='animated-background bg-Black'><About/>  
-             <Projects/>
-              <Contact/>
-             </div> 
-               
+      <div className='home-page-container h-screen'>
+        <Navbar />
+        <Hero />
+        <div className='animated-background bg-Black'><About />
+          <Projects />
+          <Contact />
         </div>
-    </>
+
+      </div>
+      </>
+
   )
 }
