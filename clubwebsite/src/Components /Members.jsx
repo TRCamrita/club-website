@@ -21,6 +21,10 @@ import Amazon from '../assets/images/amazon.png';
 import Adwaitha from '../assets/images/adwaitha.jpg'
 import Pavani from '../assets/images/pavani.jpg'
 import Club1 from '../assets/images/club-1.jpg'
+import Club2 from '../assets/images/clubmember-0.jpeg'
+import Club3 from '../assets/images/clubmember01.jpeg'
+import Club4 from '../assets/images/clubmember02.jpeg'
+import Club5 from '../assets/images/clubmember03.jpeg'
 
 export default function Members() {
 
@@ -28,12 +32,16 @@ export default function Members() {
     const [isPaused, setIsPaused] = useState(false);
     const images = [
         Pavani,
-        Playboi,
-        Lamar,
-        Adwaitha,
         Club1,
-        Charlie,
+        Club2,
+        Adwaitha,
+        Club3,
+        Club4,
+        Club5
     ]; // Add as many images as you want
+    
+
+  
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -132,31 +140,33 @@ export default function Members() {
                     </div>
                 </div>
 
-                {/* Carousel Section */}
                 <div className='holder flex flex-col px-72 mt-16'>
-                    <h1 className='text-White text-3xl font-headers'>Meet our team</h1>
-                    <div className="carousel w-full  flex flex-col h-auto mt-16">
-                        <div className="carousel-container relative flex justify-center items-center">
-                            <button className="arrow left-arrow pl-6" onClick={handlePrev}>
-                                <img src={Larrow} alt="" width={50} height={50} />
-                            </button>
-                            <div className="carousel-items flex space-x-8">
-                                {visibleItems.map((image, index) => (
-                                    <div key={index} className="carousel-item">
-                                        <img
-                                            src={image}
-                                            alt={`Carousel item ${index}`}
-                                            className="object-cover w-40 h-40"
-                                        />
-                                    </div>
-                                ))}
-                            </div>
-                            <button className="arrow right-arrow pr-6" onClick={handleNext}>
-                                <img src={Rarrow} alt="" width={50} height={50} />
-                            </button>
-                        </div>
+    <h1 className='text-White text-3xl font-headers'>Meet our team</h1>
+    <div className="carousel w-full  flex flex-col h-auto mt-16">
+        <div className="carousel-container relative flex justify-center items-center">
+            <button className="arrow left-arrow pl-6" onClick={handlePrev}>
+                <img src={Larrow} alt="" width={50} height={50} />
+            </button>
+            <div className="carousel-items flex space-x-8">
+                {visibleItems.map((image, index) => (
+                    <div key={index} className="carousel-item">
+                        <img
+                            src={image}
+                            alt={`Carousel item ${index}`}
+                            className="object-cover w-40 h-40"
+                        />
+                        <span className="overlay-text"><a href="">Adwaitha V <span className='text-sm'>EAC 2023</span></a></span>
                     </div>
-                </div>
+                ))}
+            </div>
+            <button className="arrow right-arrow pr-6" onClick={handleNext}>
+                <img src={Rarrow} alt="" width={50} height={50} />
+            </button>
+        </div>
+    </div>
+</div>
+
+
 
 
                 {/* infinite scroll slider goes here  */}
